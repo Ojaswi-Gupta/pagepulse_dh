@@ -1,5 +1,7 @@
 # Page Pulse
 
+> **AI Usage Disclosure:** For this task, I used Gemini to act as a pair programmer. I directed the AI to help me scaffold the Express backend, write the Cheerio parsing logic, and generate the baseline CSS styling based on my design requirements for a glassmorphic UI. I then reviewed, tested, and pushed the final architecture.
+
 A lightweight, robust web tool that instantly audits any URL to check its vital signs. Built as a technical assignment for the **Software Development (SDE)** role at **Digital Heroes**.
 
 ---
