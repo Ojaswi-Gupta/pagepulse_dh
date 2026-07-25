@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Pulse</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+  </div>
+  
+  <main class="container">
+    <header>
+      <h1>Page Pulse</h1>
+      <p>Instantly audit any webpage to check its vital signs.</p>
+    </header>
+
+    <section class="scanner-card glass-panel">
+      <form id="audit-form">
+        <div class="input-group">
+          <input type="url" id="url-input" placeholder="https://example.com" required>
+          <button type="submit" id="submit-btn">
+            <span class="btn-text">Audit URL</span>
+            <span class="loader hidden"></span>
+          </button>
+        </div>
+      </form>
+      <div id="error-message" class="error-msg hidden"></div>
+    </section>
+
+    <section id="results-section" class="results-grid hidden">
+      <!-- Status & Time -->
+      <div class="result-card glass-panel">
+        <div class="card-icon">⚡</div>
+        <div class="card-content">
+          <h3>Response</h3>
+          <p id="res-status" class="value">200</p>
+          <p id="res-time" class="sub-value">120ms</p>
+        </div>
+      </div>
+      
+      <!-- Content Details -->
+      <div class="result-card glass-panel span-2">
+        <div class="card-icon">📄</div>
+        <div class="card-content">
+          <h3>Page Title</h3>
+          <p id="res-title" class="value text-sm">Title</p>
+          <h3 class="mt">Meta Description</h3>
+          <p id="res-desc" class="value text-sm text-dim">Description</p>
+        </div>
+      </div>
+
+      <!-- SEO Stats -->
+      <div class="result-card glass-panel">
+        <div class="card-icon">🔍</div>
+        <div class="card-content">
+          <h3>H1 Tags</h3>
+          <p id="res-h1" class="value">1</p>
+        </div>
+      </div>
+
+      <div class="result-card glass-panel">
+        <div class="card-icon">🖼️</div>
+        <div class="card-content">
+          <h3>Missing Alt Text</h3>
+          <p id="res-alt" class="value warning">0</p>
+        </div>
+      </div>
+
+      <div class="result-card glass-panel">
+        <div class="card-icon">📝</div>
+        <div class="card-content">
+          <h3>Word Count</h3>
+          <p id="res-words" class="value">~500</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for Digital Heroes Training Task. <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer">digitalheroesco.com</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
