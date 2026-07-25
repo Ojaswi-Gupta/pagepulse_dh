@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Pulse</title>
+  <title>Page Pulse | Web Auditor</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="background">
-    <div class="glow-orb"></div>
-    <div class="glow-orb-2"></div>
-  </div>
   
   <main class="container">
-    <header>
-      <h1>Page Pulse</h1>
-      <p>Drop a URL below to instantly check its SEO hygiene and vital stats.</p>
+    <header class="hero">
+      <div class="hero-badge">System Auditor</div>
+      <h1 class="hero-title">WE CHECK THE<br>VITAL SIGNS.</h1>
+      <p class="hero-subtitle">Instantly analyze any URL. Page Pulse extracts critical SEO hygiene, response speeds, and semantic structure in milliseconds.</p>
     </header>
 
-    <section class="scanner-card glass-panel">
-      <form id="audit-form">
-        <div class="input-group">
-          <input type="url" id="url-input" placeholder="https://example.com" required>
-          <button type="submit" id="submit-btn">
-            <span class="btn-text">Audit URL</span>
+    <section class="scanner-section">
+      <form id="audit-form" class="interactive-form">
+        <div class="input-wrapper">
+          <input type="url" id="url-input" placeholder="Enter a URL (e.g. https://digitalheroesco.com)" required>
+          <button type="submit" id="submit-btn" class="interactive-btn">
+            <span class="btn-text">AUDIT NOW</span>
             <span class="loader hidden"></span>
           </button>
         </div>
@@ -36,48 +33,68 @@
 
     <section id="results-section" class="results-grid hidden">
       <!-- Status & Time -->
-      <div class="result-card glass-panel">
-        <div class="card-icon">⚡</div>
-        <div class="card-content">
+      <div class="result-card">
+        <div class="card-header">
+          <span class="card-icon">01</span>
           <h3>Response</h3>
-          <p id="res-status" class="value">200</p>
-          <p id="res-time" class="sub-value">120ms</p>
         </div>
+        <p id="res-status" class="value">200</p>
+        <p id="res-time" class="sub-value">120ms</p>
       </div>
       
       <!-- Content Details -->
-      <div class="result-card glass-panel span-2">
-        <div class="card-icon">📄</div>
-        <div class="card-content">
-          <h3>Page Title</h3>
-          <p id="res-title" class="value text-sm">Title</p>
-          <h3 class="mt">Meta Description</h3>
-          <p id="res-desc" class="value text-sm text-dim">Description</p>
+      <div class="result-card span-2">
+        <div class="card-header">
+          <span class="card-icon">02</span>
+          <h3>Meta Data</h3>
+        </div>
+        <div class="meta-content">
+          <p id="res-title" class="value text-md">Title</p>
+          <p id="res-desc" class="sub-value mt-small">Description</p>
         </div>
       </div>
 
       <!-- SEO Stats -->
-      <div class="result-card glass-panel">
-        <div class="card-icon">🔍</div>
-        <div class="card-content">
+      <div class="result-card">
+        <div class="card-header">
+          <span class="card-icon">03</span>
           <h3>H1 Tags</h3>
-          <p id="res-h1" class="value">1</p>
         </div>
+        <p id="res-h1" class="value">1</p>
       </div>
 
-      <div class="result-card glass-panel">
-        <div class="card-icon">🖼️</div>
-        <div class="card-content">
-          <h3>Missing Alt Text</h3>
-          <p id="res-alt" class="value warning">0</p>
+      <div class="result-card">
+        <div class="card-header">
+          <span class="card-icon">04</span>
+          <h3>Missing Alt</h3>
         </div>
+        <p id="res-alt" class="value warning">0</p>
       </div>
 
-      <div class="result-card glass-panel">
-        <div class="card-icon">📝</div>
-        <div class="card-content">
-          <h3>Word Count</h3>
-          <p id="res-words" class="value">~500</p>
+      <div class="result-card">
+        <div class="card-header">
+          <span class="card-icon">05</span>
+          <h3>Words</h3>
+        </div>
+        <p id="res-words" class="value">~500</p>
+      </div>
+    </section>
+
+    <!-- Explanatory Details Section -->
+    <section class="details-section">
+      <h2 class="section-title">WHY IT MATTERS</h2>
+      <div class="details-grid">
+        <div class="detail-block">
+          <h3>SPEED IS KING</h3>
+          <p>Response time directly impacts user bounce rates. If your server takes too long to respond, users leave before the DOM even starts painting.</p>
+        </div>
+        <div class="detail-block">
+          <h3>SEMANTIC HYGIENE</h3>
+          <p>Missing Alt text kills accessibility and hurts image SEO. Too many (or zero) H1 tags confuse search engine crawlers trying to understand your structure.</p>
+        </div>
+        <div class="detail-block">
+          <h3>METADATA</h3>
+          <p>Your Title and Description are your organic billboard. We instantly pull them so you can see exactly what users read on the SERP.</p>
         </div>
       </div>
     </section>
