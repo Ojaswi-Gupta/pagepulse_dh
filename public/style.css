@@ -2,7 +2,7 @@
   --bg-color: #F8F5F0; /* Soft beige */
   --text-main: #111111;
   --text-muted: #555555;
-  --border-color: #3F6B54; /* Greenish tone (moss-600) */
+  --border-color: #86B696; /* Subtle light green */
   --accent: #FF5A00; /* Bold stylish orange */
   --error: #FF0000;
   --success: #3F6B54;
@@ -333,10 +333,10 @@ input[type="url"]::placeholder {
 
 /* Stylish Footer */
 .stylish-footer {
-  background: #24453A; /* Dark green tone */
-  color: var(--bg-color);
+  background: #EBF0EC; /* Very subtle light green */
+  color: var(--text-main);
   padding: 3rem 1.5rem;
-  border-top: 6px solid var(--accent);
+  border-top: 1px solid #C8D7CD;
   font-family: var(--font-display);
   font-weight: 500;
   margin-top: auto;
@@ -357,27 +357,22 @@ input[type="url"]::placeholder {
 }
 
 .stylish-footer a {
-  color: var(--bg-color);
+  color: var(--text-main);
   text-decoration: none;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .stylish-footer a:hover {
-  background: var(--accent);
-  color: #FFF;
+  color: var(--accent);
 }
 
 .github-link {
   font-weight: 700;
   color: var(--accent) !important;
-  border-bottom-color: var(--bg-color) !important;
 }
 
 .github-link:hover {
-  background: var(--bg-color) !important;
-  color: #111 !important;
+  color: var(--text-main) !important;
 }
 
 /* Animations */
